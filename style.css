@@ -1,0 +1,143 @@
+.body{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+  background-color: #ddebd5;
+  padding: 10px 0;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar li{
+    display: inline;
+    margin: 0 15px; 
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar ul{
+    list-style: none;
+}
+
+.home1{
+    background-image: url(cafe.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+.hero-content h1, p {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.favorit {
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.favorit h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.menufavorit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; 
+}
+
+.menu-card {
+    background-color: white;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.detail-menu {
+    padding: 5px;
+    text-align: left;
+}
+
+.detail-menu h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.detail-menu .harga {
+    font-weight: bold;
+    color: #f39c12;
+    margin-bottom: 2px;
+}
+
+.detail-menu p {
+    font-size: 15px;
+    color: #555;
+}
+
+.why-us {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #fffbe6;
+}
+
+.why-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.keunggulan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; 
+}
+
+.keunggulan-card {
+    background-color: white;
+    border-radius: 10px;
+    width: 250px;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.keunggulan-card:hover {
+    transform: translateY(-5px);
+}
+
+.keunggulan-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.keunggulan-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.keunggulan-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
