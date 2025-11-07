@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservasi Meja Kopi Santai</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <section class="reservation-info">
+            <h2>Reservasi Meja</h2>
+            <p>Anda dapat memesan meja di Kopi Santai untuk memastikan tempat duduk, terutama pada jam-jam sibuk. Reservasi dapat dilakukan maksimal 7 hari sebelumnya.</p>
+            <p><strong>Persyaratan Reservasi:</strong></p>
+            <ul>
+                <li>Minimal 2 orang untuk reservasi.</li>
+                <li>Meja akan ditahan maksimal 15 menit dari waktu yang ditentukan.</li>
+                <li>Pembatalan harus dilakukan minimal 3 jam sebelumnya.</li>
+            </ul>
+        </section>
+
+        <section class="reservation-form-section">
+            <form action="/submit-reservation" method="POST" class="reservation-form">
+                
+                <fieldset>
+                    <legend>Informasi Personal</legend>
+                    <div class="form-group">
+                        <label for="full_name">Nama Lengkap*</label>
+                        <input type="text" id="full_name" name="full_name" placeholder="Masukkan Nama Lengkap Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">No. Telepon*</label>
+                        <input type="tel" id="phone" name="phone" placeholder="0812xxxxxx" pattern="[0-9]{10,14}" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Detail Reservasi</legend>
+                    <div class="form-group">
+                        <label for="date">Tanggal*</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Waktu*</label>
+                        <input type="time" id="time" name="time" required min="08:00" max="21:00">
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Jumlah Orang*</label>
+                        <select id="guests" name="guests" required>
+                            <option value="" disabled selected>Pilih Jumlah Orang</option>
+                            <script>
+                                // Script sederhana untuk mengisi dropdown 1-10
+                                for (let i = 1; i <= 10; i++) {
+                                    document.write(`<option value="${i}">${i} Orang</option>`);
+                                }
+                            </script>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="table_type">Tipe Meja</label>
+                        <select id="table_type" name="table_type">
+                            <option value="regular">Regular</option>
+                            <option value="window">Window Seat (Tergantung ketersediaan)</option>
+                            <option value="private">Private Room (Minimal 6 orang)</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="notes">Catatan Khusus (Opsional)</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Contoh: Perlu kursi bayi, atau permintaan khusus lainnya..."></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Saya setuju dengan <a href="#">syarat dan ketentuan</a> reservasi.*</label>
+                </div>
+
+                <button type="submit" class="btn primary-btn">Kirim Reservasi</button>
+            </form>
+        </section>
+        
+        <aside class="contact-alternative">
+            <h3>Reservasi Alternatif</h3>
+            <p>Jika Anda kesulitan menggunakan formulir online, Anda dapat menghubungi kami:</p>
+            <p><strong>Telepon:</strong> <a href="tel:+6281234567890">+62 812 3456 7890</a></p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/6281234567890" target="_blank">[WhatsApp Icon] Klik untuk Chat</a></p>
+        </aside>
+
+    </main>
+
+    <footer></footer>
+</body>
+</html>
